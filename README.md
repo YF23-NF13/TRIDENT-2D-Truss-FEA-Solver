@@ -9,18 +9,19 @@ MATLAB finite element solver for planar trusses. It performs a linear static ana
 Three bars meet at a single free node **A**. Nodes **B**, **C** and **D** are pinned. A load **P** is applied at A with an angle **α** to the x-axis.
 
 ```
-        D (0, L)
-          o
-          |  \
-          |    \   bar 3
-          |      \
- C (0, 0) o--------o A (L, 0)   ← P, angle α
-          |  bar 2 /
-          |      /
-          |    /   bar 1
-          |  /
-          o
-        B (0, -L)
+B (-L, 0)         C (0, 0)          D (L, 0)
+    o-----------------o-----------------o
+      \               |               /
+        \             |             /
+          \           |           /
+    bar 1   \         | bar 2   /   bar 3
+              \       |       /
+                \     |     /
+                  \   |   /
+                    \ | /
+                      o  A (0, -L)
+                      ↑
+                      P, angle α
 ```
 
 | Element | Nodes | Length |
